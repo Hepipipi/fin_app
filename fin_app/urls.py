@@ -13,6 +13,7 @@ urlpatterns = [
     path('incomes/', views.income, name='income'),
     path('analysis/', views.analysis_view, name='analysis'),
     path('redactor/<int:record_id>/', views.edit_record, name='redactor'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='fin/logout.html'), name='logout'),
 
 
 
