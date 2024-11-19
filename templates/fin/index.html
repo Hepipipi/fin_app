@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Finance%Analyze</h1>
+<form action="{% url 'expence' %}" method="get">
+    {% csrf_token %}
+    <button type="submit">Расходы</button>
+</form>
+<form action="{% url 'income' %}" method="get">
+    {% csrf_token %}
+    <button type="submit">Доходы</button>
+</form>
+
+
+
+
+
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+
+    <button type="submit">Регистрация</button>
+</form>
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+
+    <button type="submit">Войти</button>
+</form>
+
+<form action="{% url 'analysis' %}" method="post">
+    {% csrf_token %}
+
+    <button type="submit">Учет доходов и расходов</button>
+</form>
+
+
+
+
+
+<form action="{% url 'create_record' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить запись</button>
+</form>
+
+
+
+
+
+</body>
+</html>

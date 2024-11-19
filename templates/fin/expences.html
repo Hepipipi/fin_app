@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категории расходов</title>
+
+</head>
+<body>
+
+<h1>Категории расходов</h1>
+
+{% if all_expences %}
+    {% for category in all_expences %}
+        <div class="category">
+            <h2>{{ category.name }}</h2>
+            <p>{{ category.description }}</p>
+            <form action="{% url 'records_of_category' category.slug %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Записи {{ category.name }}</button>
+            </form>
+        </div>
+    {% endfor %}
+{% else %}
+    <p class="no-categories">Нет категорий расходов.</p>
+{% endif %}
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+ <!-- This line renders the form fields for 'name' and 'price' -->
+    <form action="{% url 'create_record' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить запись</button>
+</form>
+    <div class="records">
+        {% for record in records %}
+        <div class="record">
+            <p>{{ record.name }}</p>
+            <p>{{ record.price }}</p>
+            <p>{{ record.date }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</form>
+
+
+
+</body>
+</html>

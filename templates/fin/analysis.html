@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ расходов и доходов</title>
+
+<body>
+
+    <h1>Анализ расходов и доходов</h1>
+
+    <div class="report-section">
+        <h2>Ежедневный отчет</h2>
+        <p class="daily">Доход за день: <span class="highlight">{{ analysis.daily_income }} ₽</span></p>
+        <p class="daily">Расход за день: <span class="highlight">{{ analysis.daily_expense }} ₽</span></p>
+        <p class="total">Баланс за день: <span class="highlight">{{ analysis.daily_balance }} ₽</span></p>
+    </div>
+
+    <div class="report-section">
+        <h2>Общий отчет</h2>
+        <p class="daily">Общий доход: <span class="highlight">{{ analysis.total_income }} ₽</span></p>
+        <p class="daily">Общий расход: <span class="highlight">{{ analysis.total_expense }} ₽</span></p>
+        <p class="total">Общий баланс: <span class="highlight">{{ analysis.total_balance }} ₽</span></p>
+    </div>
+
+</body>
+</html>

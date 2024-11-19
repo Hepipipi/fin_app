@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+    <div class="records">
+        {% for record in records %}
+        <div class="record">
+
+            <p>{{ record.name }}</p>
+            <p>{{ record.price }}</p>
+            <p>{{ record.date }}</p>
+
+            <a href="{% url 'redactor' record.id  %}"><button type="submit">Редактировать</button></a>
+
+
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+</body>
+</html>
